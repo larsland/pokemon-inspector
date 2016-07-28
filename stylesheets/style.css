@@ -1,0 +1,62 @@
+/*---Base---*/
+body {
+    background-color: #EEE;
+}
+
+/*---Header---*/
+header {
+    height: 75px;
+    margin-bottom: 50px;
+    background-color: black;
+}
+.mainTitle {
+    font-size: 50px;
+    color: white;
+    font-weight: bold;
+    padding-left: 50px;
+}
+.searchField {
+    width: 80%;
+    margin: 0 auto;
+    display: block;
+    height: 45px;
+    margin-top: 15px;
+    padding: 10px;
+    font-size: 16px;
+}
+/*---Pokemon Objects---*/
+.pokemonContainer {
+    padding-bottom: 30;
+}
+
+.pokemonBall {
+    height: 100px;
+    width: 100px;
+    background-color: white;
+    border-radius: 90px;
+    padding-top: 15px;
+    margin: 0 auto;
+    border: 0;
+}
+.pokemonBall:hover {
+    background-color: #ccccff;
+}
+
+.pokemonSprite {
+    height: 70px;
+    width: 70px;
+    display: block;
+    margin: 0 auto;
+}
+
+.pokemonName {
+    font-size: 16px;
+}
+
+
+
+
+
+.boxShadow {
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12)
+}

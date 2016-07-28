@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Pokemon</title>
+        <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="stylesheets/style.css">
+    </head>
+
+    <body ng-app="Pokemon" ng-controller="MainCtrl">
+
+        <header>
+            <div class="row">
+
+                <div class="col-xs-7 headerFirstPart">
+                    <span class="mainTitle">Pokemon</span>
+                </div>
+                <div class="col-xs-5 headerSecondPart">
+                    <input class="searchField" type="text" ng-model="search.$" placeholder="Search by name...">
+                </div>
+            </div>
+        </header>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-2 pokemonContainer" ng-repeat="pokemon in pokemonList | filter:search">
+                    <button class="pokemonBall center boxShadow"
+                    uib-popover="Quick: {{pokemon.moves.quick}}, Special: {{pokemon.moves.special}}"
+    				popover-title="#{{pokemon.id}} {{pokemon.name}}"
+    				popover-placement="top"
+    				type="button"
+    				popover-trigger="outsideClick"
+                    >
+                        <img class="pokemonSprite" ng-src="{{pokemon.sprite}}">
+                    </button>
+                </div>
+            </div>
+
+
+        </div>
+        <script type="text/javascript" src="libs/angular/angular.min.js"></script>
+        <script type="text/javascript" src="libs/jquery/jquery-3.0.0.min.js"></script>
+        <script type="text/javascript" src="libs/ui-bootstrap/ui-bootstrap-tpls-1.3.3.min.js"></script>
+        <script type="text/javascript" src="scripts/app.js"></script>
+    </body>
+
+</html>
